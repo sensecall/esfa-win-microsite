@@ -17,9 +17,22 @@ router.use('/', (req, res, next) => {
   next()
 })
 
-//VERSIONS
+// VERSIONS
 router.use(/\/version-([0-9]+)/, (req, res, next) => {
   require(`./views/version-${req.params[0]}/routes`)(req, res, next);
+})
+
+// ------------------
+// Other ------------
+// ------------------
+// Basic linear journey
+router.use(/\/basic-linear\/version-([0-9]+)/, (req, res, next) => {
+  require(`./views/basic-linear/version-${req.params[0]}/routes`)(req, res, next);
+})
+
+// Non-GDS journey
+router.use(/\/non-gds\/version-([0-9]+)/, (req, res, next) => {
+  require(`./views/non-gds/version-${req.params[0]}/routes`)(req, res, next);
 })
 
 module.exports = router
