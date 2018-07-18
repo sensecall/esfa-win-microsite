@@ -4,6 +4,18 @@ article.featured {
 	.featured-wrapper {
 		padding: 30px;
 		display: inline-block;
+	}
+	&.featured--action {
+		background: govuk-colour("blue");
+		
+		p,
+		a {
+			color: #fff
+		}
 
+		.govuk-button {
+			color: govuk-colour("blue");
+			background: white;
+		}
 	}
 }
