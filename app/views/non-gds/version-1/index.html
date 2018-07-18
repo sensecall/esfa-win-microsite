@@ -1,9 +1,35 @@
 {% extends "layout.html" %}
 
-{% set serviceName = 'Apprenticeships for employers' %}
-
 {% block page_title %}
 {{serviceName}}
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+	homepageUrl: "#",
+	containerClasses: "govuk-width-container",
+	serviceName: "Apprenticeships for employers",
+	serviceUrl: "#",
+	navigation: [
+	{
+		href: "#1",
+		text: "Home",
+		active: true
+	},
+	{
+		href: "#2",
+		text: "What is an apprenticeship?"
+	},
+	{
+		href: "#3",
+		text: "Costs"
+	},
+	{
+		href: "#4",
+		text: "Things you need to know"
+	}
+	]
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -21,7 +47,7 @@
 						<span class="govuk-caption-l">
 							Get started
 						</span>
-						<a href="#">What is an apprenticeship?</a>
+						<a href="{{sprint}}/what-is-an-apprenticeship">What is an apprenticeship?</a>
 					</h1>
 
 					<ul class="govuk-list govuk-list--bullet">
@@ -46,7 +72,7 @@
 		</div>
 	</article>
 
-	<br>
+	<hr class="govuk-section-break govuk-section-break--xl">
 
 	<div class="govuk-grid-row">
 		<!-- HALF -->
@@ -100,7 +126,7 @@
 		<!-- END HALF -->
 	</div>
 
-	<br><br>
+	<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 	<div class="govuk-grid-row">
 		<!-- HALF -->

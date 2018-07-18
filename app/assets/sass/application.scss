@@ -11,12 +11,40 @@ $govuk-global-styles: true;
 
 // Patterns added by WIN team
 @import "patterns/featured-content";
+@import "patterns/step-by-step-nav";
 
 // Components that aren't in Frontend
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 .article-title a {
-    // color: inherit;
-    text-decoration: none;
+	text-decoration: none;
+}
+
+.article-nav-links {
+	clear: both;
+
+	.previous-link,
+	.next-link {
+		@extend %govuk-heading-m;
+
+		a {
+			text-decoration: none;
+			&:hover {
+				span:first-child {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	.previous-link {
+		float: left;
+		text-align: left;
+	}
+
+	.next-link {
+		float: right;
+		text-align: right;
+	}
 }

@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% set serviceName = 'Apprenticeships for employers' %}
+
+{% block page_title %}
+{{serviceName}}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+			<h1 class="govuk-heading-xl">
+				What is an apprenticeship?
+			</h1>
+
+			<p>
+				<img src="http://via.placeholder.com/600x400/ccc/fff?text=Image" width="100%">
+			</p>
+			
+			<p>
+				Ut et consectetur elit consectetur velit ad elit non est velit elit elit fugiat nostrud commodo ex enim elit irure esse irure incididunt ut officia.
+			</p>
+			
+			<p>
+				Est nulla commodo proident elit labore consequat non exercitation fugiat occaecat eiusmod.
+			</p>
+
+			<p>
+				Eiusmod cillum et quis nulla sint in tempor consequat occaecat quis ut et in consequat non eiusmod incididunt ea proident tempor magna id ea in dolore amet incididunt excepteur duis amet sint deserunt.
+			</p>
+
+			<h2 class="govuk-heading-m">
+				Further reading
+			</h2>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>
+					<a href="#">
+						Tempor qui occaecat.
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Lorem ipsum id veniam ad consectetur ut.
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Labore aliquip ex deserunt.
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Dolore proident dolor nulla.
+					</a>
+				</li>
+			</ul>
+
+			<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+			<div class="article-nav-links">
+				<div class="previous-link">
+					<a href="../{{sprint}}">
+						<span class="govuk-!-font-weight-bold">
+							Back
+						</span>
+						<span class="govuk-caption-m">
+							Home page
+						</span>
+					</a>
+				</div>
+
+				<div class="next-link">
+					<a href="apprenticeship-costs">
+						<span class="govuk-!-font-weight-bold">
+							Next topic
+						</span>
+						<span class="govuk-caption-m">
+							How much will it cost?
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="govuk-grid-column-one-third">
+			<div class="app-related-items">
+				<h2 class="govuk-heading-m">
+					Your progress
+				</h2>
+
+				<ul class="govuk-list govuk-list--bullet">
+					<li>Thing</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</main>
+
+{% endblock %}
