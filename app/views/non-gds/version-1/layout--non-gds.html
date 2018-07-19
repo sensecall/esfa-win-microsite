@@ -35,10 +35,10 @@
   {# Set serviceName in config.js. #}
   {{ govukHeader({
     serviceUrl: "/non-gds/"+sprint,
-    containerClasses: "govuk-width-container",
-    homepageUrl: "#",
-    containerClasses: "govuk-width-container",
-    serviceName: "",
+    containerClasses: "govuk-width-container govuk-header--apprenticeships",
+    homepageUrl: "/non-gds/"+sprint,
+    serviceName: " ",
+    productName: "Apprenticeships for employers",
     navigation: [
     {
       href: "/"+feature+"/"+sprint,
@@ -55,6 +55,10 @@
     {
       href: "#4",
       text: "Things you need to know"
+    },
+    {
+      href: "#4",
+      text: "Register"
     }
     ]
   }) }}
