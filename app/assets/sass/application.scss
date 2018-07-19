@@ -50,12 +50,12 @@ $govuk-global-styles: true;
 	}
 }
 
-.govuk-header__content {
-	text-align: right;
-	float: right;
-}
-
 .govuk-header--apprenticeships {
 	// border-bottom: none;
-	padding-bottom: 10px
+	padding-bottom: 10px;
+	
+	.govuk-header__content {
+		text-align: right;
+		float: right;
+	}
 }
