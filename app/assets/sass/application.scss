@@ -23,6 +23,7 @@ $govuk-global-styles: true;
 
 .article-nav-links {
 	clear: both;
+	overflow: auto;
 
 	.previous-link,
 	.next-link {
@@ -47,4 +48,9 @@ $govuk-global-styles: true;
 		float: right;
 		text-align: right;
 	}
+}
+
+.govuk-header__content {
+	text-align: right;
+	float: right;
 }

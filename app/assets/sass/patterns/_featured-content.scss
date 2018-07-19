@@ -9,13 +9,35 @@ article.featured {
 		background: govuk-colour("blue");
 		
 		p,
-		a {
+		a,
+		li {
 			color: #fff
+		}
+		.govuk-caption-l {
+			color: rgba(255,255,255,0.7)
 		}
 
 		.govuk-button {
 			color: govuk-colour("blue");
 			background: white;
+			-webkit-box-shadow: 0 2px 0 #003259;
+			-moz-box-shadow: 0 2px 0 #003259;
+			box-shadow: 0 2px 0 #003259;
+			background: #fff;
+			margin-right: 15px;
+
+			&:link, &:visited, &:hover {
+				color: #005ea5;
+			}
+
+			&.govuk-button--start {
+				margin: 0;
+				padding-right: 15px;
+			}
+		}
+
+		a:link, a:visited {
+			color: #fff;
 		}
 	}
 }

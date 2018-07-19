@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "./layout--non-gds.html" %}
 
 {% set serviceName = 'Apprenticeships for employers' %}
 
@@ -7,7 +7,6 @@
 {% endblock %}
 
 {% block content %}
-
 <main id="content" role="main">
 	<div class="govuk-grid-row">
 		<div class="govuk-grid-column-two-thirds">
@@ -15,21 +14,70 @@
 				How much do apprenticeships cost employers?
 			</h1>
 
+			<h2 class="govuk-heading-l">
+				Funding your apprentice:
+			</h2>
+
 			<p>
-				<img src="http://via.placeholder.com/600x400/ccc/fff?text=Image" width="100%">
+				You can get help from the government to pay for apprenticeship training.
 			</p>
 
 			<p>
-				Ut et consectetur elit consectetur velit ad elit non est velit elit elit fugiat nostrud commodo ex enim elit irure esse irure incididunt ut officia.
+				The amount you get depends on whether you pay the apprenticeship levy or not. You pay the levy if you’re an employer with a pay bill over £3 million each year.
 			</p>
-			
+
+			<h2 class="govuk-heading-l">
+				If you don’t need to pay the levy
+			</h2>
+
 			<p>
-				Est nulla commodo proident elit labore consequat non exercitation fugiat occaecat eiusmod.
+				You pay 10% towards the cost of training and assessing your apprentice. 
 			</p>
 
 			<p>
-				Eiusmod cillum et quis nulla sint in tempor consequat occaecat quis ut et in consequat non eiusmod incididunt ea proident tempor magna id ea in dolore amet incididunt excepteur duis amet sint deserunt.
+				You need to:
 			</p>
+
+			<ul class="govuk-list govuk-list--bullet">
+				<li>
+					agree a payment schedule with the training organisation
+				</li>
+
+				<li>
+					pay them directly for the training
+				</li>
+			</ul>
+
+			<p>
+				The government will pay the rest (90%) up to the funding band maximum. They’ll pay it directly to the training organisation.
+			</p>
+
+			<p>
+				Additionally you can get extra funding 
+			</p>
+			If you pay the apprenticeship levy
+			You’ll receive funds to spend on training and assessing your apprentices. The government will add 10%.
+
+			<p>
+				Apprenticeship funding is devolved and so how you get your funds and pay for training depends on whether you’re in:
+			</p>
+
+			<ul class="govuk-list govuk-list--bullet">
+				<li>
+					England
+				</li>
+				<li>
+					Scotland
+				</li>
+				<li>
+					Wales
+				</li>
+				<li>
+					Northern Ireland
+				</li>
+			</ul>
+
+			<hr class="govuk-section-break govuk-section-break--xl">
 
 			<h2 class="govuk-heading-m">
 				Further reading
@@ -77,49 +125,15 @@
 							Next topic
 						</span>
 						<span class="govuk-caption-m">
-							How much will it cost?
+							Things you need to know
 						</span>
 					</a>
 				</div>
 			</div>
 		</div>
-
+		
 		<div class="govuk-grid-column-one-third">
-			<ol class="task-list">
-				<li class="task-list-step">
-					<div class="task-list-step-header">
-						<h3 class="task-list-step-title">
-							<span class="task-list-step-circle task-list-step-circle--number">
-								<span class="task-list-step-circle-inner">
-									<span class="task-list-step-circle-background">
-										<span class="govuk-visually-hidden">Step</span> 1
-									</span>
-								</span>
-							</span>
-
-							<a class="task-list-step-link">
-								<span class="task-list-step-title">
-									Check you're allowed to drive
-								</span>
-							</a>
-						</h3>
-					</div>
-
-					<div class="task-list-step-panel">
-						<p class="task-list-step-paragraph">
-							Most people can start learning to drive when they’re 17.
-						</p>
-
-						<ol class="task-list-step-list">
-							<li class="task-list-step-list-item">
-								<a class="task-list-step-link" href="#">
-									<span class="visuallyhidden">You are currently viewing: </span>Check what age you can drive
-								</a>
-							</li>
-						</ol>
-					</div>
-				</li>
-			</ol>
+			{% include "./includes/_task-list.html" %}
 		</div>
 	</div>
 </main>
