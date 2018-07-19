@@ -12,11 +12,25 @@ $govuk-global-styles: true;
 // Patterns added by WIN team
 @import "patterns/featured-content";
 @import "patterns/step-by-step-nav";
+@import "components/homepage-top";
 
 // Components that aren't in Frontend
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+.prototype-home {
+	.govuk-header__logo {
+		svg {
+			display: none;
+		}
+	}
+
+	.govuk-header__container {
+		border-bottom: none;
+		padding-bottom: 10px
+	}
+}
+
 .article-title a {
 	text-decoration: none;
 }
@@ -53,7 +67,7 @@ $govuk-global-styles: true;
 .govuk-header--apprenticeships {
 	// border-bottom: none;
 	padding-bottom: 10px;
-	
+
 	.govuk-header__content {
 		text-align: right;
 		float: right;
