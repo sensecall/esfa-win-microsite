@@ -18,9 +18,9 @@ router.use('/', (req, res, next) => {
 })
 
 // VERSIONS
-router.use(/\/version-([0-9]+)/, (req, res, next) => {
-  require(`./views/version-${req.params[0]}/routes`)(req, res, next);
-})
+// router.use(/\/version-([0-9]+)/, (req, res, next) => {
+//   require(`./views/version-${req.params[0]}/routes`)(req, res, next);
+// })
 
 // ------------------
 // Other ------------
@@ -33,6 +33,11 @@ router.use(/\/basic-linear\/version-([0-9]+)/, (req, res, next) => {
 // Non-GDS journey
 router.use(/\/non-gds\/version-([0-9]+)/, (req, res, next) => {
   require(`./views/non-gds/version-${req.params[0]}/routes`)(req, res, next);
+})
+
+// Branching
+router.use(/\/branching\/version-([0-9]+)/, (req, res, next) => {
+  require(`./views/branching/version-${req.params[0]}/routes`)(req, res, next);
 })
 
 module.exports = router
