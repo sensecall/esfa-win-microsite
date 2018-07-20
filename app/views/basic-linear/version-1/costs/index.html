@@ -7,26 +7,28 @@
 {% endblock %}
 
 {% block content %}
-<main id="content" role="main">
-	<div class="govuk-grid-row">
-		<div class="govuk-grid-column-two-thirds">
-			<h1 class="govuk-heading-xl">
-				How much will an apprenticeship cost me?
-			</h1>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		{% include '../includes/_back-link.html' %}
 
-			<p class="govuk-body-l">
-				How to fund your apprenticeships, whether you’re a levy-paying employer, a small employer who doesn’t pay the levy, or an employer who’s receiving a transfer of apprenticeship funds.
-			</p>
+		<h1 class="govuk-heading-xl">
+			<span class="govuk-caption-l">
+				Section 2
+			</span>
+			How much will an apprenticeship cost me?
+		</h1>
 
-			<a href="costs/funding" class="govuk-button govuk-button--start">
-				Continue
-			</a>
-		</div>
-		
-		<div class="govuk-grid-column-one-third">
+		<p class="govuk-body-l">
+			How to fund your apprenticeships, whether you’re a levy-paying employer, a small employer who doesn’t pay the levy, or an employer who’s receiving a transfer of apprenticeship funds.
+		</p>
 
-		</div>
+		<a href="costs/funding" class="govuk-button govuk-button--start">
+			Next
+		</a>
 	</div>
-</main>
+	
+	<div class="govuk-grid-column-one-third">
 
+	</div>
+</div>
 {% endblock %}
