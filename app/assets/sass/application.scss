@@ -29,6 +29,11 @@ $govuk-global-styles: true;
 		border-bottom: none;
 		padding-bottom: 10px
 	}
+
+	.govuk-header {
+		display: none;
+		border-bottom: none;
+	}
 }
 
 .article-title a {
