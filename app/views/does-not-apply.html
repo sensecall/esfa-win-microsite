@@ -1,4 +1,4 @@
-{% extends "./layout--non-gds.html" %}
+{% extends "layout.html" %}
 
 {% set serviceName = 'Apprenticeships for employers' %}
 
@@ -11,7 +11,7 @@
 	<div class="govuk-grid-row">
 		<div class="govuk-grid-column-two-thirds">
 			<h1 class="govuk-heading-xl">
-				What is an apprenticeship?
+				This 
 			</h1>
 			
 			<p>
@@ -147,7 +147,7 @@
 
 			<hr class="govuk-section-break govuk-section-break--xl">
 
-			<!-- <h2 class="govuk-heading-m">
+			<h2 class="govuk-heading-m">
 				Further reading
 			</h2>
 			<ul class="govuk-list govuk-list--bullet">
@@ -171,37 +171,11 @@
 						Dolore proident dolor nulla.
 					</a>
 				</li>
-			</ul> -->
+			</ul>
 
 			<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-			<h2 class="govuk-heading-l">
-				Continue reading this guide?
-			</h2>
-
-			<p>
-				This page forms part of the Apprenticeships for employers guide, which helps employers understand apprenticeships.
-			</p>
-
-			<a href="apprenticeship-costs" class="govuk-button">
-				Continue
-			</a>
-
-			{% from "checkboxes/macro.njk" import govukCheckboxes %}
-
-			{{ govukCheckboxes(
-				{
-					idPrefix: "mark-as-read",
-					name: "mark-as-read",
-					items: [
-					{
-						value: "complete",
-						text: "Save my progress for next time"
-					}]
-				})
-			}}
-
-			<!-- <div class="article-nav-links">
+			<div class="article-nav-links">
 				<div class="previous-link">
 					<a href="../{{sprint}}">
 						<span class="govuk-!-font-weight-bold">
@@ -226,11 +200,11 @@
 						</span>
 					</a>
 				</div>
-			</div> -->
+			</div>
 		</div>
 		
 		<div class="govuk-grid-column-one-third">
-			{% include "./includes/_task-list.html" %}
+
 		</div>
 	</div>
 </main>
