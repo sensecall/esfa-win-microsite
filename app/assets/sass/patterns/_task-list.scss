@@ -19,6 +19,10 @@ $task-list-indent: 35px;
   }
 }
 
+.app-task-list__description {
+  margin-left:35px
+}
+
 .app-task-list__section {
   display: table;
 
@@ -63,7 +67,7 @@ $task-list-indent: 35px;
 }
 
 .app-task-list__task-name {
-  width: 33.3%;
+  width: 50%;
   float: left;
 }
 

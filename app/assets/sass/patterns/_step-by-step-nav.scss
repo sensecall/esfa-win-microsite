@@ -1,3 +1,5 @@
+$circle-width: 26px;
+
 .task-list {
   padding: 0;
   margin: 0;
@@ -43,11 +45,11 @@
       z-index: 5;
       top: 15px;
       left: 0;
-      width: 26px;
-      height: 26px;
+      width: $circle-width;
+      height: $circle-width;
       color: #0b0c0c;
       background: #fff;
-      border-radius: 100px;
+      border-radius: $circle-width * 4;
       text-align: center;
       border: solid 2px #bfc1c3;
 
@@ -80,11 +82,11 @@
           display: block;
           border-radius: 20px;
           min-width: auto;
-          width: 50%;
-          height: 50%;
+          width: $circle-width / 2;
+          height: $circle-width / 2;
           position: absolute;
-          left: 5.5px;
-          top: 5.5px;
+          left: $circle-width;
+          top: 9.5px;
           background: govuk-colour("white");
         }
       }
@@ -122,13 +124,13 @@
         .task-list-step-circle-inner {
           content: "";
           display: block;
-          border-radius: 20px;
+          border-radius: $circle-width;
           min-width: auto;
-          width: 50%;
-          height: 50%;
+          width: $circle-width - 8;
+          height: $circle-width - 8;
           position: absolute;
-          left: 5.5px;
-          top: 5.5px;
+          left: 2px;
+          top: 2px;
           background: govuk-colour("black");
         }
       }
@@ -139,6 +141,39 @@
 
       .task-list-step-circle {
         border-color: govuk-colour("black");
+      }
+    }
+
+    &.task-list-step--completed {
+      .task-list-step-circle--bullet {
+        content: "a";
+        color: #fff;
+        font-family: "nta", Arial, sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: none;
+        line-height: 23px;
+
+        .task-list-step-circle-inner {
+          content: "";
+          display: block;
+          border-radius: 20px;
+          min-width: auto;
+          width: $circle-width - 8;
+          height: $circle-width - 8;
+          position: absolute;
+          left: 2px;
+          top: 2px;
+          background: govuk-colour("green");
+        }
+      }
+
+      &:after {
+        border-color: govuk-colour("green");
+      }
+
+      .task-list-step-circle {
+        border-color: govuk-colour("green");
       }
     }
 

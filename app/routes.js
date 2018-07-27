@@ -40,4 +40,9 @@ router.use(/\/branching\/version-([0-9]+)/, (req, res, next) => {
   require(`./views/branching/version-${req.params[0]}/routes`)(req, res, next);
 })
 
+// Question and answer
+router.use(/\/question-answer\/version-([0-9]+)/, (req, res, next) => {
+  require(`./views/question-answer/version-${req.params[0]}/routes`)(req, res, next);
+})
+
 module.exports = router
