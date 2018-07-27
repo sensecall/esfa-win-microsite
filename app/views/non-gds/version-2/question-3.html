@@ -1,0 +1,71 @@
+{% extends "./layout-qa.html" %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+			{% include 'includes/back-link.html' %}
+			
+			<h1 class="govuk-heading-xl">
+				Tell us about your business
+			</h1>
+
+			<h2 class="govuk-heading-m">
+				{{data['business-name']}}
+			</h2>
+			<p>
+				{% if data['levy'] == 'no' %}
+				Your pay bill is less than &pound;3 million per month, so you don't pay the apprenticeship levy. <a href="#">Change</a>
+				{% elif data['levy'] == 'yes' %}
+				You pay the apprenticeship levy because your pay bill is over &pound;3 million per month. <a href="#">Change</a>
+				{% endif %}
+			</p>
+
+			<hr class="govuk-section-break govuk-section-break--xl">
+
+			{% from "radios/macro.njk" import govukRadios %}
+			{{ govukRadios(
+				{
+					classes: "govuk-radios--inline",
+					idPrefix: "apprentices-already",
+					name: "apprentices-already",
+					fieldset:
+					{
+						legend:
+						{
+							text: "Are there any apprentices already employed at your business?",
+							isPageHeading: no,
+							classes: "govuk-fieldset__legend--m"
+						}
+					},
+					hint:
+					{
+						html: 'Minim cillum ullamco tempor in laborum in quis quis.'
+					},
+					items:
+					[
+					{
+						value: "yes",
+						text: "Yes"
+					},
+					{
+						value: "no",
+						text: "No"
+					}
+					]
+				})
+			}}
+
+			<p>
+				<a href="question-4" class="govuk-button">
+					Continue
+				</a>
+			</p>
+		</div>
+	</div>
+</main>
+
+{% endblock %}
