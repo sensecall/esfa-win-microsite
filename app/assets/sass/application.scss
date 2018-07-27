@@ -13,6 +13,7 @@ $govuk-global-styles: true;
 @import "patterns/featured-content";
 @import "patterns/step-by-step-nav";
 @import "components/homepage-top";
+@import "patterns/flash-card";
 
 // Components that aren't in Frontend
 @import "components/cookie-banner";

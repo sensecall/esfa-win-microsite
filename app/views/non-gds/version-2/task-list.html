@@ -9,9 +9,19 @@
     <div class="govuk-grid-column-two-thirds">
       {% include 'includes/back-link.html' %}
       
+      {% if data['bespoke-guidance'] == 'true' %}
       <h1 class="govuk-heading-xl">
-        Apprenticeship guidance for your business
+        Your personalised guide to apprenticeships
+        <span class="govuk-caption-xl">
+          <span class="govuk-visually-hidden">Created for: </span>
+          {{ data['business-name'] }}
+        </span>
       </h1>
+      {% else %}
+      <h1 class="govuk-heading-xl">
+        Apprenticeship guidance for employers
+      </h1>
+      {% endif %}
 
       <ol class="app-task-list">
         <li>
@@ -98,7 +108,7 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
-                How much does it cost to employ an apprentice
+                How are apprenticeships different?
               </a>
               {% if data['section-1-1'] == 'completed' %}
               <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
@@ -108,7 +118,17 @@
             </li>
             <li class="app-task-list__item">
               <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
-                Apprenticeship costs for levy-paying businesses
+                Equivalent qualifications
+              </a>
+              {% if data['section-1-1'] == 'completed' %}
+              <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                Completed
+              </strong>
+              {% endif %}
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name govuk-!-font-weight-bold" href="#" aria-describedby="company-information-completed">
+                Find apprenticeship training
               </a>
               {% if data['section-1-1'] == 'completed' %}
               <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
@@ -152,6 +172,16 @@
                 Apprenticeship costs for levy-paying businesses
               </a>
             </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name govuk-!-font-weight-bold" href="#" aria-describedby="company-information-completed">
+                Estimate apprenticeship costs
+              </a>
+              {% if data['section-1-1'] == 'completed' %}
+              <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                Completed
+              </strong>
+              {% endif %}
+            </li>
           </ul>
         </li>
 
@@ -191,6 +221,16 @@
             <li class="app-task-list__item">
               <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
                 Apprenticeship costs for levy-paying businesses
+              </a>
+              {% if data['section-1-1'] == 'completed' %}
+              <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                Completed
+              </strong>
+              {% endif %}
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name govuk-!-font-weight-bold" href="#" aria-describedby="company-information-completed">
+                Recruit an apprentice
               </a>
               {% if data['section-1-1'] == 'completed' %}
               <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">

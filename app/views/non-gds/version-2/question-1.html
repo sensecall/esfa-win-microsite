@@ -6,61 +6,59 @@
 
 {% block content %}
 <main id="content" role="main">
-	<div class="govuk-grid-row">
-		<div class="govuk-grid-column-two-thirds">
-			{% include 'includes/back-link.html' %}
+	{% include 'includes/back-link.html' %}
 
-			<h1 class="govuk-heading-xl">
-				Find out about apprenticeships
-			</h1>
+	<div class="flash-card">
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-two-thirds">
+				<h1 class="govuk-heading-xl">
+					Before you start
+				</h1>
 
-			<p>
-				Use this service to find out more about what an apprenticeship is and how they’re structured - additionally, which different levels of apprenticeships are available for your business.
-			</p>
+				<hr class="govuk-section-break govuk-section-break--xl">
 
-			<hr class="govuk-section-break govuk-section-break--xl">
+				<form action="question-2">
+					{% from "radios/macro.njk" import govukRadios %}
 
-			<form action="question-2">
-				{% from "radios/macro.njk" import govukRadios %}
-
-				{{ govukRadios(
-					{
-						classes: "govuk-radios",
-						idPrefix: "bespoke-guidance",
-						name: "bespoke-guidance",
-						fieldset:
+					{{ govukRadios(
 						{
-							legend:
+							classes: "govuk-radios",
+							idPrefix: "bespoke-guidance",
+							name: "bespoke-guidance",
+							fieldset:
 							{
-								text: "Do you want to tell us about your business so we only show you relevant guidance?",
-								isPageHeading: true,
-								classes: "govuk-fieldset__legend--l"
+								legend:
+								{
+									text: "Do you want to tell us about your business so we only show you relevant guidance?",
+									isPageHeading: true,
+									classes: "govuk-fieldset__legend--l"
+								}
+							},
+							hint:
+							{
+								text: "Any information you provide is only used to personalise your experience, nothing else."
+							},
+							items:
+							[
+							{
+								value: "true",
+								text: "Yes"
+							},
+							{
+								value: "false",
+								text: "No"
 							}
-						},
-						hint:
-						{
-							text: "Any information you provide is only used to personalise your experience, nothing else."
-						},
-						items:
-						[
-						{
-							value: "true",
-							text: "Yes, I can share some information about my business"
-						},
-						{
-							value: "false",
-							text: "No, I'd rather explore all the guidance"
-						}
-						]
-					})
-				}}
+							]
+						})
+					}}
 
-				{% from "button/macro.njk" import govukButton %}
+					{% from "button/macro.njk" import govukButton %}
 
-				{{ govukButton({
-					text: "Continue"
-				}) }}
-			</form>
+					{{ govukButton({
+						text: "Continue"
+					}) }}
+				</form>
+			</div>
 		</div>
 	</div>
 </main>
