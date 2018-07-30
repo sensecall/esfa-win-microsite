@@ -15,101 +15,103 @@
 
 			{% include './includes/_answers.html' %}
 
-			{% from "radios/macro.njk" import govukRadios %}
-
-			{{ govukRadios(
-				{
-					classes: "govuk-radios--inline",
-					idPrefix: "found-apprentice",
-					name: "found-apprentice",
-					fieldset:
+			<form action="summary">
+				{% from "radios/macro.njk" import govukRadios %}
+				{{ govukRadios(
 					{
-						legend:
+						classes: "govuk-radios--inline",
+						idPrefix: "found-apprentice",
+						name: "found-apprentice",
+						fieldset:
 						{
-							text: "Have you already found the person who will be starting an apprenticeship with your business?",
-							isPageHeading: no,
-							classes: "govuk-fieldset__legend--m"
-						}
-					},
-					hint:
-					{
-						html: "If you have already found the person who will be doing the apprenticeship then we won't show you guidance about Finding an apprentice."
-					},
-					items:
-					[
-					{
-						value: "yes",
-						text: "Yes"
-					},
-					{
-						value: "no",
-						text: "No"
-					}
-					]
-				})
-			}}
-
-			{{ govukRadios(
-				{
-					classes: "govuk-radios--inline",
-					idPrefix: "chosen-apprenticeship",
-					name: "chosen-apprenticeship",
-					fieldset:
-					{
-						legend:
+							legend:
+							{
+								text: "Have you already found the person who will be starting an apprenticeship with your business?",
+								isPageHeading: no,
+								classes: "govuk-fieldset__legend--m"
+							}
+						},
+						hint:
 						{
-							text: "Have you decided which apprenticeship(s) will be best suited to your business?",
-							isPageHeading: no,
-							classes: "govuk-fieldset__legend--m"
-						}
-					},
-					items:
-					[
-					{
-						value: "yes",
-						text: "Yes"
-					},
-					{
-						value: "no",
-						text: "No"
-					}
-					]
-				})
-			}}
-
-			{{ govukRadios(
-				{
-					classes: "govuk-radios--inline",
-					idPrefix: "found-provider",
-					name: "found-provider",
-					fieldset:
-					{
-						legend:
+							html: "If you have already found the person who will be doing the apprenticeship then we won't show you guidance about Finding an apprentice."
+						},
+						items:
+						[
 						{
-							text: "Have you chosen a Training provider?",
-							isPageHeading: no,
-							classes: "govuk-fieldset__legend--m"
+							value: "yes",
+							text: "Yes"
+						},
+						{
+							value: "no",
+							text: "No"
 						}
-					},
-					items:
-					[
-					{
-						value: "yes",
-						text: "Yes"
-					},
-					{
-						value: "no",
-						text: "No"
-					}
-					]
-				})
-			}}
+						]
+					})
+				}}
 
-			<p>
-				<a href="summary" class="govuk-button">
-					Continue
-				</a>
-			</p>
+				{{ govukRadios(
+					{
+						classes: "govuk-radios--inline",
+						idPrefix: "chosen-apprenticeship",
+						name: "chosen-apprenticeship",
+						fieldset:
+						{
+							legend:
+							{
+								text: "Have you decided which apprenticeship(s) will be best suited to your business?",
+								isPageHeading: no,
+								classes: "govuk-fieldset__legend--m"
+							}
+						},
+						items:
+						[
+						{
+							value: "yes",
+							text: "Yes"
+						},
+						{
+							value: "no",
+							text: "No"
+						}
+						]
+					})
+				}}
+
+				{{ govukRadios(
+					{
+						classes: "govuk-radios--inline",
+						idPrefix: "found-provider",
+						name: "found-provider",
+						fieldset:
+						{
+							legend:
+							{
+								text: "Have you chosen a Training provider?",
+								isPageHeading: no,
+								classes: "govuk-fieldset__legend--m"
+							}
+						},
+						items:
+						[
+						{
+							value: "yes",
+							text: "Yes"
+						},
+						{
+							value: "no",
+							text: "No"
+						}
+						]
+					})
+				}}
+
+				<input type="hidden" name="personalised" value="true">
+
+				{% from "button/macro.njk" import govukButton %}
+				{{ govukButton({
+					text: "Save and continue"
+				}) }}
+			</form>
 		</div>
 	</div>
 </main>
