@@ -13,57 +13,45 @@
 				Tell us about your business
 			</h1>
 
-			<h2 class="govuk-heading-m">
-				{{data['business-name']}}
-			</h2>
-			<p>
-				{% if data['levy'] == 'no' %}
-				Your pay bill is less than &pound;3 million per month, so you don't pay the apprenticeship levy. <a href="#">Change</a>
-				{% elif data['levy'] == 'yes' %}
-				You pay the apprenticeship levy because your pay bill is over &pound;3 million per month. <a href="#">Change</a>
-				{% endif %}
-			</p>
+			{% include './includes/_answers.html' %}
 
 			<hr class="govuk-section-break govuk-section-break--xl">
 
-			{% from "radios/macro.njk" import govukRadios %}
-			{{ govukRadios(
-				{
-					classes: "govuk-radios--inline",
-					idPrefix: "apprentices-already",
-					name: "apprentices-already",
-					fieldset:
+			<form action="question-4">
+				{% from "radios/macro.njk" import govukRadios %}
+				{{ govukRadios(
 					{
-						legend:
+						classes: "govuk-radios--inline",
+						idPrefix: "apprentices-already",
+						name: "apprentices-already",
+						fieldset:
 						{
-							text: "Are there any apprentices already employed at your business?",
-							isPageHeading: no,
-							classes: "govuk-fieldset__legend--m"
+							legend:
+							{
+								text: "Are there any apprentices already employed at your business?",
+								isPageHeading: no,
+								classes: "govuk-fieldset__legend--m"
+							}
+						},
+						items:
+						[
+						{
+							value: "yes",
+							text: "Yes"
+						},
+						{
+							value: "no",
+							text: "No"
 						}
-					},
-					hint:
-					{
-						html: 'Minim cillum ullamco tempor in laborum in quis quis.'
-					},
-					items:
-					[
-					{
-						value: "yes",
-						text: "Yes"
-					},
-					{
-						value: "no",
-						text: "No"
-					}
-					]
-				})
-			}}
+						]
+					})
+				}}
 
-			<p>
-				<a href="question-4" class="govuk-button">
-					Continue
-				</a>
-			</p>
+				{% from "button/macro.njk" import govukButton %}
+				{{ govukButton({
+					text: "Save and continue"
+				}) }}
+			</form>
 		</div>
 	</div>
 </main>

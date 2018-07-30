@@ -17,12 +17,12 @@
 
 				<hr class="govuk-section-break govuk-section-break--xl">
 
-				<form action="question-2">
+				<form method="post">
 					{% from "radios/macro.njk" import govukRadios %}
 
 					{{ govukRadios(
 						{
-							classes: "govuk-radios",
+							classes: "govuk-radios--inline",
 							idPrefix: "bespoke-guidance",
 							name: "bespoke-guidance",
 							fieldset:
@@ -42,11 +42,13 @@
 							[
 							{
 								value: "true",
-								text: "Yes"
+								text: "Yes",
+								checked: true if data["bespoke-guidance"] == "true"
 							},
 							{
 								value: "false",
-								text: "No"
+								text: "No",
+								checked: true if data["bespoke-guidance"] == "false"
 							}
 							]
 						})
@@ -55,7 +57,8 @@
 					{% from "button/macro.njk" import govukButton %}
 
 					{{ govukButton({
-						text: "Continue"
+						text: "Continue",
+						classes: "app-button--inverted"
 					}) }}
 				</form>
 			</div>

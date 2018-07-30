@@ -13,6 +13,8 @@
 				Tell us about your business
 			</h1>
 
+			{% include './includes/_answers.html' %}
+
 			{% from "radios/macro.njk" import govukRadios %}
 
 			{{ govukRadios(
@@ -24,14 +26,14 @@
 					{
 						legend:
 						{
-							text: "Do you already know someone who is planning to start an apprenticeship with your business?",
+							text: "Have you already found the person who will be starting an apprenticeship with your business?",
 							isPageHeading: no,
 							classes: "govuk-fieldset__legend--m"
 						}
 					},
 					hint:
 					{
-						html: 'Minim cillum ullamco tempor in laborum in quis quis.'
+						html: "If you have already found the person who will be doing the apprenticeship then we won't show you guidance about Finding an apprentice."
 					},
 					items:
 					[
@@ -50,8 +52,8 @@
 			{{ govukRadios(
 				{
 					classes: "govuk-radios--inline",
-					idPrefix: "found-apprentice",
-					name: "found-apprentice",
+					idPrefix: "chosen-apprenticeship",
+					name: "chosen-apprenticeship",
 					fieldset:
 					{
 						legend:
@@ -82,8 +84,8 @@
 			{{ govukRadios(
 				{
 					classes: "govuk-radios--inline",
-					idPrefix: "found-apprentice",
-					name: "found-apprentice",
+					idPrefix: "found-provider",
+					name: "found-provider",
 					fieldset:
 					{
 						legend:

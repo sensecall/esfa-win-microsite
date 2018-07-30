@@ -18,14 +18,15 @@
 				{% from "input/macro.njk" import govukInput %}
 
 				<h2 class="govuk-heading-m">
-					What is you business name? (optional)
+					What is your business name? (optional)
 				</h2>
 				{{ govukInput(
 					{
 						label:
 						{
-							text: "Business name"
+							text: "Business name (optional)"
 						},
+						value: data['business-name'],
 						id: "business-name",
 						name: "business-name"
 					})
@@ -53,15 +54,18 @@
 						[
 						{
 							value: "yes",
-							text: "Yes"
+							text: "Yes",
+							checked: data["levy"] == "yes"
 						},
 						{
 							value: "no",
-							text: "No"
+							text: "No",
+							checked: data["levy"] == "no"
 						},
 						{
 							value: "dont-know",
-							text: "I don't know"
+							text: "I don't know",
+							checked: data["levy"] == "dont-know"
 						}
 						]
 					})
