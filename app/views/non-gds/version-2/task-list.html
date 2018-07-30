@@ -5,10 +5,9 @@
 
 {% block content %}
 <main id="content" role="main">
+  {% include 'includes/back-link.html' %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      {% include 'includes/back-link.html' %}
-      
       {% if data['bespoke-guidance'] == 'true' %}
       <h1 class="govuk-heading-xl">
         Your personalised guide to apprenticeships
@@ -22,7 +21,11 @@
         Apprenticeship guidance for employers
       </h1>
       {% endif %}
+    </div>
+  </div>
 
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <ol class="app-task-list">
         <li>
           <h2 class="app-task-list__section">
@@ -31,11 +34,11 @@
 
           {% if data['bespoke-guidance'] == 'true' %}
           <div class="app-task-list__description">
-            <p class="govuk-body-s">
+            <p>
               We thought this section would be relevant because you told us:
             </p>
 
-            <ul class="govuk-list govuk-list--bullet govuk-body-s">
+            <ul class="govuk-list govuk-list--bullet">
               <li>
                 your business does not currently employ any apprentices
               </li>
@@ -48,7 +51,7 @@
 
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
-              <a class="app-task-list__task-name" href="#" aria-describedby="eligibility-completed">
+              <a class="app-task-list__task-name" href="guidance/what-is-an-apprenticeship" aria-describedby="eligibility-completed">
                 What is an apprenticeship
               </a>
 
@@ -90,11 +93,11 @@
 
           {% if data['bespoke-guidance'] == 'true' %}
           <div class="app-task-list__description">
-            <p class="govuk-body-s">
+            <p>
               We thought this section would be relevant because you told us:
             </p>
 
-            <ul class="govuk-list govuk-list--bullet govuk-body-s">
+            <ul class="govuk-list govuk-list--bullet">
               <li>
                 your business does not pay the levy
               </li>
@@ -146,11 +149,11 @@
 
           {% if data['bespoke-guidance'] == 'true' %}
           <div class="app-task-list__description">
-            <p class="govuk-body-s">
+            <p>
               We thought this section would be relevant because you told us:
             </p>
 
-            <ul class="govuk-list govuk-list--bullet govuk-body-s">
+            <ul class="govuk-list govuk-list--bullet">
               <li>
                 your business does not pay the levy
               </li>
@@ -192,11 +195,11 @@
 
           {% if data['bespoke-guidance'] == 'true' %}
           <div class="app-task-list__description">
-            <p class="govuk-body-s">
+            <p>
               We thought this section would be relevant because you told us:
             </p>
 
-            <ul class="govuk-list govuk-list--bullet govuk-body-s">
+            <ul class="govuk-list govuk-list--bullet">
               <li>
                 your business does not pay the levy
               </li>
@@ -254,6 +257,32 @@
           </ul>
         </li>
       </ol>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      {% if data['bespoke-guidance'] == 'true' %}
+      <div class="app-related-items">
+        <h2 class="govuk-heading-s govuk-!-margin-bottom-2">
+          Share your guide          
+        </h2>
+
+        <p class="govuk-body-s govuk-!-margin-bottom-0">
+          You can share your personalised guide to apprenticeships with other people using this link:
+        </p>
+
+        <div class="govuk-inset-text govuk-!-font-size-16 govuk-!-margin-top-2">
+          <a href="http://gov.uk/apprenticeships/guide/HS822JNQ">https://gov.uk/apprenticeships/guide/HS822JNQ</a>
+        </div>
+
+        <h2 class="govuk-heading-s govuk-!-margin-bottom-2">
+          Print          
+        </h2>
+
+        <p class="govuk-body-s">
+          You can also <a href="#">download your guide as a PDF document</a>.
+        </p>
+      </div>
+      {% endif %}
     </div>
   </div>
 </main>
