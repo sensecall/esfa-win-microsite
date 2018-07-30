@@ -7,15 +7,19 @@
 <main id="content" role="main">
   {% include 'includes/back-link.html' %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
       {% if data['bespoke-guidance'] == 'true' %}
-      <h1 class="govuk-heading-xl">
-        Your personalised guide to apprenticeships
-        <span class="govuk-caption-xl">
-          <span class="govuk-visually-hidden">Created for: </span>
-          {{ data['business-name'] }}
-        </span>
-      </h1>
+      <article class="featured featured--action">
+        <div class="featured-wrapper">
+        <h1 class="govuk-heading-xl article-title">
+          Your personalised guide to apprenticeships
+          <span class="govuk-caption-xl govuk-!-margin-top-3">
+            <span class="govuk-visually-hidden">Created for: </span>
+            {{ data['business-name'] }}
+          </span>
+        </h1>
+      </div>
+      </article>
       {% else %}
       <h1 class="govuk-heading-xl">
         Apprenticeship guidance for employers
