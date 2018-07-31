@@ -11,12 +11,14 @@
       {% if data['bespoke-guidance'] == 'true' %}
       <article class="featured featured--action">
         <div class="featured-wrapper">
-        <h1 class="govuk-heading-xl article-title">
+        <h1 class="govuk-heading-xl article-title govuk-!-margin-bottom-2">
           Your personalised guide to apprenticeships
+          {% if data['business-name'] %}
           <span class="govuk-caption-xl govuk-!-margin-top-3">
             <span class="govuk-visually-hidden">Created for: </span>
             {{ data['business-name'] }}
           </span>
+          {% endif %}
         </h1>
       </div>
       </article>
@@ -33,7 +35,7 @@
       <ol class="app-task-list">
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">1. </span> An introduction to apprenticeships
+            <span class="app-task-list__section-number">1. </span> Introduction to apprenticeships
           </h2>
 
           {% if data['bespoke-guidance'] == 'true' %}
