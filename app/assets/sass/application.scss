@@ -145,9 +145,15 @@ $govuk-global-styles: true;
 		height: 300px;
 		img {
 			width: 100%;
-			margin-top: -120px;
-			transform: scaleX(-1);
+			margin-top: -15%;
+			filter: grayscale(100%);
 		}
+	}
+
+	.app-aside {
+		background: govuk-colour("grey-4");
+		border-top: $govuk-gutter/3 solid $govuk-border-colour;
+		padding: $govuk-gutter/2 $govuk-gutter;
 	}
 }
 

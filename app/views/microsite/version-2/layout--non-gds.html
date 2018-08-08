@@ -34,9 +34,9 @@
   {% include "includes/cookie-banner.html" %}
   {# Set serviceName in config.js. #}
   {{ govukHeader({
-    serviceUrl: "/non-gds/"+sprint,
+    serviceUrl: '/'+feature+'/'+sprint,
     containerClasses: "govuk-width-container govuk-header--apprenticeships",
-    homepageUrl: "/non-gds/"+sprint,
+    homepageUrl: '/'+feature+'/'+sprint,
     serviceName: " ",
     productName: "Apprenticeships for employers",
     navigation: [
