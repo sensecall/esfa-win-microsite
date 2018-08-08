@@ -24,4 +24,8 @@
 		{% endif %}
 	</p>
 	{% endif %}
+
+	{% if not data['levy'] or not data['apprentices-already'] %}
+	Nothing!
+	{% endif %}
 </div>

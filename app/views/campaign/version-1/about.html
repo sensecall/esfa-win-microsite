@@ -1,0 +1,84 @@
+{% extends "./layout--non-gds.html" %}
+
+{% block page_title %}
+{{serviceName}}
+{% endblock %}
+
+{% block main %}
+<div class="full-width-image">
+	<img src="https://hireanapprentice.campaign.gov.uk/wp-content/uploads/sites/66/2018/01/BW-banner-apprenticeships.jpg">
+</div>
+
+<div class="govuk-width-container">
+	<main class="govuk-main-wrapper " id="main-content" role="main">
+		{% block content %}
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-two-thirds">
+				<h1 class="govuk-heading-xl govuk-!-margin-top-8">
+					What types of apprenticeship are there?
+				</h1>
+
+				<p>
+					Ex ea ex laborum sint irure adipisicing pariatur incididunt fugiat consectetur dolore ullamco irure laboris occaecat sit officia in sint dolore proident incididunt deserunt elit aliquip laboris consequat nisi consectetur esse.
+				</p>
+
+				<h2 class="govuk-heading-l govuk-!-margin-top-4">
+					Frameworks
+				</h2>
+				<p>
+					Fugiat elit nulla incididunt ut in laborum sunt aute anim duis in commodo excepteur consectetur laborum culpa irure velit velit.
+				</p>
+
+				<h2 class="govuk-heading-l govuk-!-margin-top-4">
+					Standards
+				</h2>
+				<p>
+					Fugiat elit nulla incididunt ut in laborum sunt aute anim duis in commodo excepteur consectetur laborum culpa irure velit velit.
+				</p>
+
+				<a href="#" class="govuk-button govuk-button--xl">
+					Find apprenticeship training
+				</a>
+
+				<hr class="govuk-section-break govuk-section-break--xl">
+
+				<h2 class="govuk-heading-l govuk-!-margin-top-4">
+					Apprentices
+				</h2>
+				<p>
+					Ex ea ex laborum sint irure adipisicing pariatur incididunt fugiat consectetur dolore ullamco irure laboris occaecat sit officia in sint dolore proident incididunt deserunt elit aliquip laboris consequat nisi consectetur esse.
+				</p>
+
+				<p>
+					Fugiat elit nulla incididunt ut in laborum sunt aute anim duis in commodo excepteur consectetur laborum culpa irure velit velit.
+				</p>
+
+				<a href="#" class="govuk-button govuk-button--xl">
+					Recruit an apprentice
+				</a>
+
+				<hr class="govuk-section-break govuk-section-break--xl">
+
+				<div class="app-action-buttons">
+					<a class="app-action-buttons__button" href="{{sprint}}/estimator">
+						<span>I want to</span> estimate the cost of taking on an apprentice
+					</a>
+
+					<a class="app-action-buttons__button" href="#">
+						<span>I want to</span> find the right apprenticeship
+					</a>
+
+					<a class="app-action-buttons__button" href="#">
+						<span>I want to</span> use my levy funds for apprenticeships
+					</a>
+
+					<a class="app-action-buttons__button" href="#">
+						<span>I want to</span> use funds transferred to me
+					</a>
+				</div>
+			</div>
+		</div>
+		{% endblock %}
+	</main>
+</div>
+{% endblock %}

@@ -31,8 +31,8 @@ router.use(/\/basic-linear\/version-([0-9]+)/, (req, res, next) => {
 })
 
 // Non-GDS journey
-router.use(/\/non-gds\/version-([0-9]+)/, (req, res, next) => {
-  require(`./views/non-gds/version-${req.params[0]}/routes`)(req, res, next);
+router.use(/\/microsite\/version-([0-9]+)/, (req, res, next) => {
+  require(`./views/microsite/version-${req.params[0]}/routes`)(req, res, next);
 })
 
 // Branching
@@ -43,6 +43,11 @@ router.use(/\/branching\/version-([0-9]+)/, (req, res, next) => {
 // Question and answer
 router.use(/\/question-answer\/version-([0-9]+)/, (req, res, next) => {
   require(`./views/question-answer/version-${req.params[0]}/routes`)(req, res, next);
+})
+
+// Branching
+router.use(/\/campaign\/version-([0-9]+)/, (req, res, next) => {
+  require(`./views/campaign/version-${req.params[0]}/routes`)(req, res, next);
 })
 
 module.exports = router
