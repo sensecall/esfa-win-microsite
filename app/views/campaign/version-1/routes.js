@@ -11,4 +11,8 @@ router.post('/question-1', (req, res) => {
 	}
 })
 
+router.get('/costs', (req, res) => {
+	res.redirect('costs-of-employing-an-apprentice')
+})
+
 module.exports = router
