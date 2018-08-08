@@ -18,6 +18,7 @@ $govuk-global-styles: true;
 @import "patterns/autocomplete";
 @import "patterns/action-buttons";
 @import "patterns/app-content-nav";
+@import "components/global-header";
 
 // Components that aren't in Frontend
 @import "components/cookie-banner";
@@ -93,7 +94,7 @@ $govuk-global-styles: true;
 	nav,
 	a:not(.govuk-header__logotype-text),
 	.govuk-button {
-		font-family: Arial !important;
+		// font-family: Arial !important;
 	}
 
 	%govuk-heading-xl,
@@ -115,41 +116,45 @@ $govuk-global-styles: true;
 		padding-bottom: $padding-top-bottom + 4;
 		padding-top: $padding-top-bottom;
 		background: $theme-colour;
-		border-top: 40px solid black;
 		clear: both;
+
+		.govuk-header__logotype {
+			display: none;
+		}
 
 		.govuk-header__container {
 			border: none;
 		}
 
 		.govuk-header__logo {
-			width: 25%
+			width: 25%;
 		}
 
 		.govuk-header__content {
-			width: 75%
+			width: 72.5%
 		}
 
 		.govuk-header__navigation {
 			float: right
 		}
 	}
-}
 
-.full-width-image {
-	overflow: hidden;
-	width: 100%;
-	height: 360px;
-	img {
+	.full-width-image {
+		overflow: hidden;
 		width: 100%;
-		margin-top: -150px
+		height: 300px;
+		img {
+			width: 100%;
+			margin-top: -120px;
+			transform: scaleX(-1);
+		}
 	}
 }
 
 .govuk-button--xl {
-    padding-top: govuk-spacing(3);
-    padding-right: govuk-spacing(4);
-    padding-bottom: govuk-spacing(3);
-    padding-left: govuk-spacing(4);
-    font-weight: bold;
+	padding-top: govuk-spacing(3);
+	padding-right: govuk-spacing(4);
+	padding-bottom: govuk-spacing(3);
+	padding-left: govuk-spacing(4);
+	font-weight: bold;
 }

@@ -23,71 +23,84 @@
 {% from "warning-text/macro.njk"  import govukWarningText %}
 
 {% block head %}
-  {% include "includes/head.html" %}
+{% include "includes/head.html" %}
 {% endblock %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 
 {% set htmlClasses = "campaign-style" %}
 
 {% block header %}
-  {% include "includes/cookie-banner.html" %}
-  {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    serviceUrl: "/non-gds/"+sprint,
-    classes: "campaign-nav",
-    homepageUrl: "/non-gds/"+sprint,
-    productName: "",
-    navigation: [
-    {
-      href: "/" + feature + "/" + sprint,
-      text: "Home"
-    },
-    {
-      href: "/" + feature + "/" + sprint + "/about",
-      text: "About"
-    },
-    {
-      href: "/" + feature + "/" + sprint + "/costs",
-      text: "Costs"
-    },
-    {
-      href: "#4",
-      text: "Choose apprenticeship training"
-    },
-    {
-      href: "#4",
-      text: "Find an apprentice"
-    },
-    {
-      href: "#4",
-      text: "Register"
-    }
-    ]
-  }) }}
+{% include "includes/cookie-banner.html" %}
+
+<header role="banner" class="global-header">
+  <div class="govuk-width-container">
+    <div class="header-logo">
+     <a href="/">
+       <img src="/public/images/hmgov.png" width="208" height="31" alt="HM Government">
+     </a>
+   </div>
+ </div>
+</header>
+
+{# Set serviceName in config.js. #}
+
+
+{{ govukHeader({
+  serviceUrl: "/non-gds/"+sprint,
+  classes: "campaign-nav",
+  homepageUrl: "/non-gds/"+sprint,
+  productName: "Apprenticeships",
+  navigation: [
+  {
+    href: "/" + feature + "/" + sprint,
+    text: "Home"
+  },
+  {
+    href: "/" + feature + "/" + sprint + "/about",
+    text: "About"
+  },
+  {
+    href: "/" + feature + "/" + sprint + "/costs",
+    text: "Costs"
+  },
+  {
+    href: "#4",
+    text: "Choose apprenticeship training"
+  },
+  {
+    href: "#4",
+    text: "Find an apprentice"
+  },
+  {
+    href: "#4",
+    text: "Register"
+  }
+  ]
+}) }}
 {% endblock %}
 
 {% if useAutoStoreData %}
-  {% block footer %}
-    {{ govukFooter({
-      meta: {
-        items: [
-          {
-            href: "/prototype-admin/clear-data",
-            text: "Clear data"
-          }
-        ]
-      }
-    }) }}
-  {% endblock %}
+{% block footer %}
+{{ govukFooter({
+  meta: {
+  items: [
+  {
+    href: "/prototype-admin/clear-data",
+    text: "Clear data"
+  }
+  ]
+}
+}) }}
+{% endblock %}
 {% endif %}
 
 {% block bodyEnd %}
-  {% block scripts %}
-    {% include "includes/scripts.html" %}
-    {% block pageScripts %}{% endblock %}
-  {% endblock %}
-  <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+{% block scripts %}
+{% include "includes/scripts.html" %}
+{% block pageScripts %}{% endblock %}
+{% endblock %}
+<!-- GOV.UK Prototype Kit {{releaseVersion}} -->
 {% endblock %}
