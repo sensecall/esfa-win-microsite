@@ -1,14 +1,20 @@
 .app-action-buttons {
 	.app-action-buttons__button {
-		display: inline-block;
 		position: relative;
 		text-decoration: none;
-		width: auto;
-		padding: $govuk-gutter / 1.5;
 		color: #fff;
-		margin-bottom: $govuk-gutter;
 		border-bottom: 4px solid;
 		@include govuk-font($size: 24, $weight: bold);
+
+		display: inline;
+		float: left;
+		margin-bottom: 5%;
+		min-height: 130px;
+		padding: 0.6em .6em 2em .6em !important;
+		width: 28%;
+		min-width: 240px;
+		vertical-align: middle;
+		margin-right: 2%;
 
 		$box-colour: govuk-colour("blue");
 		background: $box-colour;
@@ -16,7 +22,8 @@
 
 		span {
 			font-weight: normal;
-			color: rgba(255,255,255,0.9)
+			color: rgba(255,255,255,0.9);
+			display: block;
 		}
 
 		&:nth-of-type(1) {
@@ -40,7 +47,7 @@
 			border-bottom-color: darken($box-colour,10%);
 		}
 		&:nth-of-type(5) {
-			$box-colour: govuk-colour("yellow");
+			$box-colour: govuk-colour("light-green");
 			background: $box-colour;
 			border-bottom-color: darken($box-colour,10%);
 		}
