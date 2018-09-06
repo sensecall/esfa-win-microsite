@@ -137,6 +137,21 @@ $govuk-global-styles: true;
 		.govuk-header__navigation {
 			float: right
 		}
+
+		.govuk-header__navigation-item {
+			a:hover {
+				text-decoration: none;
+				border-bottom: 2px solid govuk-colour("white")
+			}
+			
+			&.govuk-header__navigation-item--active {
+				a {
+					color: govuk-colour("white");
+					border-bottom: 2px solid govuk-colour("white")
+
+				}
+			}
+		}
 	}
 
 	.full-width-image {

@@ -56,18 +56,21 @@ GOV.UK Prototype Kit
   navigation: [
   {
     href: "/" + feature + "/" + sprint,
-    text: "Home"
+    text: "Home",
+    active: currentPage == 'home'
   },
   {
     href: "/" + feature + "/" + sprint + "/about",
-    text: "About"
+    text: "About",
+    active: currentPage == 'about'
   },
   {
     href: "/" + feature + "/" + sprint + "/costs-of-employing-an-apprentice",
-    text: "Costs"
+    text: "Costs",
+    active: currentPage == 'costs'
   },
   {
-    href: "#4",
+    href: "/" + feature + "/" + sprint + "/choose-apprenticeship-training",
     text: "Choose apprenticeship training"
   },
   {

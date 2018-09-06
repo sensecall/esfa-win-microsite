@@ -12,7 +12,23 @@ router.post('/question-1', (req, res) => {
 })
 
 router.get('/costs', (req, res) => {
-	res.redirect('costs-of-employing-an-apprentice')
+	var currentPage = 'costs'
+	res.redirect('costs-of-employing-an-apprentice',{currentPage})
+})
+
+router.get('/costs-of-employing-an-apprentice', (req, res) => {
+	var currentPage = 'costs'
+	res.render(`${req.version}/${req.sprint}/costs-of-employing-an-apprentice`,{currentPage})
+})
+
+router.get('/', (req, res) => {
+	var currentPage = 'home'
+	res.render(`${req.version}/${req.sprint}/index`,{currentPage})
+})
+
+router.get('/about', (req, res) => {
+	var currentPage = 'about'
+	res.render(`${req.version}/${req.sprint}/about`,{currentPage})
 })
 
 module.exports = router
