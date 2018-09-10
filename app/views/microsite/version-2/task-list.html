@@ -1,26 +1,26 @@
 {% extends "./layout--non-gds.html" %}
 
-{% block page_title %}
+{% block beforeContent %}
+{% include 'includes/back-link.html' %}
 {% endblock %}
 
 {% block content %}
 <main id="content" role="main">
-  {% include 'includes/back-link.html' %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       {% if data['bespoke-guidance'] == 'true' %}
       <article class="featured featured--action">
         <div class="featured-wrapper">
-        <h1 class="govuk-heading-xl article-title govuk-!-margin-bottom-2">
-          Your personalised guide to apprenticeships
-          {% if data['business-name'] %}
-          <span class="govuk-caption-xl govuk-!-margin-top-3">
-            <span class="govuk-visually-hidden">Created for: </span>
-            {{ data['business-name'] }}
-          </span>
-          {% endif %}
-        </h1>
-      </div>
+          <h1 class="govuk-heading-xl article-title govuk-!-margin-bottom-2">
+            Your personalised guide to apprenticeships
+            {% if data['business-name'] %}
+            <span class="govuk-caption-xl govuk-!-margin-top-3">
+              <span class="govuk-visually-hidden">Created for: </span>
+              {{ data['business-name'] }}
+            </span>
+            {% endif %}
+          </h1>
+        </div>
       </article>
       {% else %}
       <h1 class="govuk-heading-xl">
@@ -57,7 +57,7 @@
 
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
-              <a class="app-task-list__task-name" href="guidance/what-is-an-apprenticeship" aria-describedby="eligibility-completed">
+              <a class="app-task-list__task-name" href="what-is-an-apprenticeship" aria-describedby="eligibility-completed">
                 What is an apprenticeship
               </a>
 
@@ -68,7 +68,7 @@
               {% endif %}
             </li>
             <li class="app-task-list__item">
-              <a class="app-task-list__task-name" href="#" aria-describedby="read-declaration-completed">
+              <a class="app-task-list__task-name" href="https://www.gov.uk/apprenticeships-guide" aria-describedby="read-declaration-completed">
                 What is an apprentice
               </a>
 
@@ -94,7 +94,53 @@
 
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">2. </span> Choosing the right apprenticeship
+            <span class="app-task-list__section-number">2. </span> Apprenticeship costs and funding
+          </h2>
+
+          {% if data['bespoke-guidance'] == 'true' %}
+          <div class="app-task-list__description">
+            <p>
+              We thought this section would be relevant because you told us:
+            </p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                your business does not pay the levy
+              </li>
+              <li>
+                your business does not currently employ any apprentices
+              </li>
+            </ul>
+          </div>
+          {% endif %}
+
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                How much does it cost to employ an apprentice
+              </a>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                Apprenticeship costs for levy-paying businesses
+              </a>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name govuk-!-font-weight-bold" href="#" aria-describedby="company-information-completed">
+                Estimate apprenticeship costs
+              </a>
+              {% if data['section-1-1'] == 'completed' %}
+              <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                Completed
+              </strong>
+              {% endif %}
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Choosing the right apprenticeship
           </h2>
 
           {% if data['bespoke-guidance'] == 'true' %}
@@ -138,52 +184,6 @@
             <li class="app-task-list__item">
               <a class="app-task-list__task-name govuk-!-font-weight-bold" href="#" aria-describedby="company-information-completed">
                 Find apprenticeship training
-              </a>
-              {% if data['section-1-1'] == 'completed' %}
-              <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
-                Completed
-              </strong>
-              {% endif %}
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">3. </span> Apprenticeship costs and funding
-          </h2>
-
-          {% if data['bespoke-guidance'] == 'true' %}
-          <div class="app-task-list__description">
-            <p>
-              We thought this section would be relevant because you told us:
-            </p>
-
-            <ul class="govuk-list govuk-list--bullet">
-              <li>
-                your business does not pay the levy
-              </li>
-              <li>
-                your business does not currently employ any apprentices
-              </li>
-            </ul>
-          </div>
-          {% endif %}
-
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
-                How much does it cost to employ an apprentice
-              </a>
-            </li>
-            <li class="app-task-list__item">
-              <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
-                Apprenticeship costs for levy-paying businesses
-              </a>
-            </li>
-            <li class="app-task-list__item">
-              <a class="app-task-list__task-name govuk-!-font-weight-bold" href="#" aria-describedby="company-information-completed">
-                Estimate apprenticeship costs
               </a>
               {% if data['section-1-1'] == 'completed' %}
               <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">

@@ -1,6 +1,7 @@
 {% extends "./layout--non-gds.html" %}
 
 {% set serviceName = 'Apprenticeships for employers' %}
+{% set currentPage = 'about' %}
 
 {% block page_title %}
 {{serviceName}}
@@ -20,7 +21,7 @@
 
 			<ul class="govuk-list govuk-list--bullet">
 				<li>
-					apprentices are aged 16 or over 
+					<a href="https://www.gov.uk/apprenticeships-guide">apprentices</a> are aged 16 or over
 				</li>
 				<li>
 					they combine working with studying to gain skills and knowledge in a specific job  
@@ -147,61 +148,17 @@
 
 			<hr class="govuk-section-break govuk-section-break--xl">
 
-			<!-- <h2 class="govuk-heading-m">
-				Further reading
+			<h2 class="govuk-heading-m">
+				Further reading:
 			</h2>
 			<ul class="govuk-list govuk-list--bullet">
-				<li>
-					<a href="#">
-						Tempor qui occaecat.
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						Lorem ipsum id veniam ad consectetur ut.
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						Labore aliquip ex deserunt.
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						Dolore proident dolor nulla.
-					</a>
-				</li>
-			</ul> -->
+				<li><a href="#">A guide to apprenticeships</a></li>
+				<li><a href="#">How to take on an apprentice</a></li>
+			</ul>
 
 			<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-			<h2 class="govuk-heading-l">
-				Continue reading this guide?
-			</h2>
-
-			<p>
-				This page forms part of the Apprenticeships for employers guide, which helps employers understand apprenticeships.
-			</p>
-
-			<a href="apprenticeship-costs" class="govuk-button">
-				Continue
-			</a>
-
-			{% from "checkboxes/macro.njk" import govukCheckboxes %}
-
-			{{ govukCheckboxes(
-				{
-					idPrefix: "mark-as-read",
-					name: "mark-as-read",
-					items: [
-					{
-						value: "complete",
-						text: "Save my progress for next time"
-					}]
-				})
-			}}
-
-			<!-- <div class="article-nav-links">
+			<div class="article-nav-links">
 				<div class="previous-link">
 					<a href="../{{sprint}}">
 						<span class="govuk-!-font-weight-bold">
@@ -219,14 +176,14 @@
 							<span class="govuk-visually-hidden">
 								Go to the 
 							</span>
-							Next topic
+							Next topic<span class="govuk-visually-hidden">:</span>
 						</span>
 						<span class="govuk-caption-m">
 							How much will it cost?
 						</span>
 					</a>
 				</div>
-			</div> -->
+			</div>
 		</div>
 		
 		<div class="govuk-grid-column-one-third">

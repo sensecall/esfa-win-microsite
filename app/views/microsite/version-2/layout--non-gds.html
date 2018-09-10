@@ -42,15 +42,18 @@
     navigation: [
     {
       href: "/" + feature + "/" + sprint,
-      text: "Home"
+      text: "Home",
+      active: currentPage == 'home'
     },
     {
       href: "/" + feature + "/" + sprint + "/what-is-an-apprenticeship",
-      text: "What is an apprenticeship?"
+      text: "What is an apprenticeship?",
+      active: currentPage == 'about'
     },
     {
       href: "/" + feature + "/" + sprint + "/apprenticeship-costs",
-      text: "Costs"
+      text: "Costs",
+      active: currentPage == 'costs'
     },
     {
       href: "#4",
@@ -62,6 +65,8 @@
     }
     ]
   }) }}
+
+  <hr class="govuk-section-break govuk-section-break--l">
 {% endblock %}
 
 {% if useAutoStoreData %}

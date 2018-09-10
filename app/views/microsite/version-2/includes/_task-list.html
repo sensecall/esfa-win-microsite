@@ -1,9 +1,9 @@
-<div class="app-related-items">
-	<h2 class="govuk-heading-m">
+<div class="app-related-items app-related-items--apprenticeships">
+	<h2 class="govuk-heading-m app-related-items__heading">
 		<span class="govuk-caption-m">
 			Part of the guide:
 		</span>
-		{% set taskLink = "../task-list" %}
+		{% set taskLink = "task-list" %}
 		{% if data['personalised'] == 'false' %}
 		{% set taskLink = "../question-1" %}
 		{% endif %}
@@ -15,14 +15,14 @@
 			<h3 class="govuk-heading-s">
 				Introduction to apprenticeships
 			</h3>
-			<ul class="govuk-list govuk-list--bullet govuk-body-s">
+			<ul class="govuk-list govuk-body-s">
 				<li>
-					<a href="#">
+					<a href="what-is-an-apprenticeship">
 						What is an apprenticeship
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="https://www.gov.uk/apprenticeships-guide">
 						What is an apprentice
 					</a>
 				</li>
@@ -34,13 +34,38 @@
 			</ul>
 		</li>
 
-		<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+		<li>
+			<h3 class="govuk-heading-s">
+				Apprenticeship costs and funding
+			</h3>
+			<ul class="govuk-list govuk-body-s">
+				<li>
+					<a href="#">
+						How much does it cost to employ an apprentice
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Apprenticeship costs for levy-paying businesses
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Estimate apprenticeship costs
+					</a>
+				</li>
+			</ul>
+		</li>
+
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 		<li>
 			<h3 class="govuk-heading-s">
 				Choosing the right apprenticeship
 			</h3>
-			<ul class="govuk-list govuk-list--bullet govuk-body-s">
+			<ul class="govuk-list govuk-body-s">
 				<li>
 					<a href="#">
 						How are apprenticeships different?
@@ -59,38 +84,13 @@
 			</ul>
 		</li>
 
-		<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
-		<li>
-			<h3 class="govuk-heading-s">
-				Apprenticeship costs and funding
-			</h3>
-			<ul class="govuk-list govuk-list--bullet govuk-body-s">
-				<li>
-					<a href="#">
-						How much does it cost to employ an apprentice
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						Apprenticeship costs for levy-paying businesses
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						Estimate apprenticeship costs
-					</a>
-				</li>
-			</ul>
-		</li>
-
-		<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 		<li>
 			<h3 class="govuk-heading-s">
 				Finding an apprentice
 			</h3>
-			<ul class="govuk-list govuk-list--bullet govuk-body-s">
+			<ul class="govuk-list govuk-body-s">
 				<li>
 					<a href="#">
 						How much does it cost to employ an apprentice
@@ -109,13 +109,13 @@
 			</ul>
 		</li>
 
-		<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 		<li>
 			<h3 class="govuk-heading-s">
-				 Register
+				Register
 			</h3>
-			<ul class="govuk-list govuk-list--bullet govuk-body-s">
+			<ul class="govuk-list govuk-body-s">
 				<li>
 					<a href="#">
 						Sign up to the Manage apprenticeships service

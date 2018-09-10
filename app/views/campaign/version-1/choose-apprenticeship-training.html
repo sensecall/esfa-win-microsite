@@ -1,5 +1,7 @@
 {% extends "./layout--non-gds.html" %}
 
+{% set currentPage = 'choose-apprenticeship-training' %}
+
 {% block page_title %}
 {{serviceName}}
 {% endblock %}
@@ -61,6 +63,10 @@
 				<a href="https://findapprenticeshiptraining.sfa.bis.gov.uk/" class="govuk-button govuk-button--xl">
 					Find apprenticeship training
 				</a>
+
+				<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+				{{ nextLink('Find an apprentice', 'find-an-apprentice') }}
 			</div>
 		</div>
 		{% endblock %}

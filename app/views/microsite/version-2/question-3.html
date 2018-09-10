@@ -13,10 +13,6 @@
 				Tell us about your business
 			</h1>
 
-			{% include './includes/_answers.html' %}
-
-			<hr class="govuk-section-break govuk-section-break--xl">
-
 			<form action="question-4">
 				{% from "radios/macro.njk" import govukRadios %}
 				{{ govukRadios(
@@ -46,6 +42,8 @@
 						]
 					})
 				}}
+
+				{% include './includes/_answers.html' %}
 
 				{% from "button/macro.njk" import govukButton %}
 				{{ govukButton({

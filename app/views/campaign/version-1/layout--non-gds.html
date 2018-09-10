@@ -30,6 +30,14 @@
 GOV.UK Prototype Kit
 {% endblock %}
 
+{% macro nextLink(name, href='#') %}
+<div class="app-content-nav">
+  <a href="{{href}}" class="app-content-nav__next">
+    Next: <span>{{name}}</span>
+  </a>
+</div>
+{% endmacro %}
+
 {% set htmlClasses = "campaign-style" %}
 
 {% block header %}
@@ -71,15 +79,18 @@ GOV.UK Prototype Kit
   },
   {
     href: "/" + feature + "/" + sprint + "/choose-apprenticeship-training",
-    text: "Choose apprenticeship training"
+    text: "Choose apprenticeship training",
+    active: currentPage == 'choose-apprenticeship-training'
   },
   {
     href: "#4",
-    text: "Find an apprentice"
+    text: "Find an apprentice",
+    active: currentPage == 'find-an-apprentice'
   },
   {
-    href: "#4",
-    text: "Register"
+    href: "/" + feature + "/" + sprint + "/register",
+    text: "Register",
+    active: currentPage == 'register'
   }
   ]
 }) }}

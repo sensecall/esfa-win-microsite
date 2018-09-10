@@ -1,0 +1,40 @@
+{% extends "./layout--non-gds.html" %}
+
+{% set currentPage = 'register' %}
+
+{% block page_title %}
+{{serviceName}}
+{% endblock %}
+
+{% block main %}
+<div class="full-width-image">
+	<img src="https://images.pexels.com/photos/53621/calculator-calculation-insurance-finance-53621.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" style="margin-top: -20%">
+</div>
+
+<div class="govuk-width-container">
+	<main class="govuk-main-wrapper " id="main-content" role="main">
+		{% block content %}
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-two-thirds">
+				<h1 class="govuk-heading-xl govuk-heading--campaign govuk-!-margin-top-8">
+					Register on the apprenticeship service
+				</h1>
+				<p>
+					If you are a levy-paying employer, you need to <a href="https://www.gov.uk/guidance/manage-apprenticeship-funds#registering-on-the-apprenticeship-service">create an account</a> on the apprenticeship service to:
+				</p>
+				<ul class="govuk-list govuk-list--bullet">
+					<li>receive levy funds for you to spend on apprenticeships</li>
+					<li>manage your apprentices</li>
+					<li>pay your training provider</li>
+					<li>stop or pause payments to your training provider</li>
+				</ul>
+
+				<p>
+					If you don’t pay the levy, you will pay for your <a href="#">apprentices directly to the training provider</a>.  
+				</p>
+			</div>
+		</div>
+		{% endblock %}
+	</main>
+</div>
+{% endblock %}

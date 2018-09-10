@@ -1,14 +1,17 @@
 <div class="govuk-inset-text">
-	{% if data['business-name'] %}
 	<h2 class="govuk-heading-m">
-		{{data['business-name']}} <span class="govuk-body-m"><a href="question-2">Change</a></span>
+		What you've told us so far
 	</h2>
+	{% if data['business-name'] %}
+	<p>
+		<span class="govuk-!-font-weight-bold">Your business name:</span> {{data['business-name']}} <span class="govuk-body-m"><a href="question-2">Change</a></span>
+	</p>
 	{% endif %}
 
 	{% if data['levy'] %}
 	<p>
 		{% if data['levy'] == 'no' %}
-		Your pay bill is less than &pound;3 million per month, so you don't pay the apprenticeship levy. <a href="question-2">Change</a>
+		Your annual pay bill is less than £3 million, so you don’t pay the apprenticeship levy. <a href="question-2">Change</a>
 		{% elif data['levy'] == 'yes' %}
 		You pay the apprenticeship levy because your pay bill is over &pound;3 million per month. <a href="question-2">Change</a>
 		{% endif %}
@@ -26,6 +29,5 @@
 	{% endif %}
 
 	{% if not data['levy'] or not data['apprentices-already'] %}
-	Nothing!
 	{% endif %}
 </div>
