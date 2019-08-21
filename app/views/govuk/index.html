@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% set serviceName = '' %}
+
+{% block page_title %}
+{{serviceName}}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+	items: [
+	{
+		text: "Home",
+		href: "#"
+	},
+	{
+		text: "Education and learning",
+		href: "#"
+	},
+	{
+		text: "Apprenticeships, 14 to 19 education and training for work",
+		href: "#"
+	}
+	]
+}) }}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+			<h1 class="govuk-heading-xl">
+				Employing an apprentice
+			</h1>
+
+			<ul class="govuk-list govuk-!-font-size-16">
+				<li>— Overview</li>
+				<li>— Get funding</li>
+				<li>— Pay and conditions for apprentices</li>
+				<li>— Make an apprenticeship agreement</li>
+			</ul>
+
+			<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+		</div>
+		
+		<div class="govuk-grid-column-one-third">
+
+		</div>
+	</div>
+</main>
+
+{% endblock %}
